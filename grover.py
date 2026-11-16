@@ -4,14 +4,9 @@ from qiskit.circuit.library import ZGate
 from qiskit_aer import AerSimulator
 from qiskit_aer.noise import NoiseModel, depolarizing_error
 
-# ==========================================
-# EDIT THESE VALUES DIRECTLY
-# ==========================================
-TARGET_STATES = ["01"]  # Examples: ["00"], ["11"], ["01", "10"], or ["101"]
+TARGET_STATES = ["01"] 
 SHOTS = 1024
 NOISE_LEVELS = [0.0, 0.01, 0.05, 0.1]
-# ==========================================
-
 
 def build_and_run_grover(targets, shots, noise_level):
     num_qubits = len(targets[0])
